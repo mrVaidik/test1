@@ -11,6 +11,10 @@ from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 from htmlTemplates import css, bot_template, user_template
 from langchain.llms import HuggingFaceHub
+from langchain.embeddings import GoogleGenerativeAIEmbeddings
+
+
+
 genai.configure(api_key="AIzaSyBLCwOO1BpSyA4L9OyPcg8wUcfnUdLgrIc")
 
 def get_pdf_text(pdf_docs):
@@ -34,8 +38,8 @@ def get_text_chunks(text):
 
 
 def get_vectorstore(text_chunks):
-    embeddings = GoogleGenerativeAIEmbeddings()
-    # embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-xl")
+   # Example initialization with hypothetical parameters
+    embeddings = GoogleGenerativeAIEmbeddings(api_key="AIzaSyBLCwOO1BpSyA4L9OyPcg8wUcfnUdLgrIc")
     vectorstore = FAISS.from_texts(texts=text_chunks, embedding=embeddings)
     return vectorstore
 
