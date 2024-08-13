@@ -2,6 +2,5 @@ streamlit
 python-dotenv
 PyPDF2
 langchain==0.0.184
-langchain-google-genai
 google-generative-ai
 
