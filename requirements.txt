@@ -3,4 +3,8 @@ python-dotenv
 PyPDF2
 langchain==0.0.184
 google-generative-ai
+faiss-cpu
+google-generative-ai
+langchain-google-genai
+
 
